@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+    <div class="con">
+        <h1>title</h1>
+        <p>subtitle</p>
+        
+    </div>
+    </header>   
+   
+       
+       
+        <div class="con">
+           <ul class="card">
+
+                <li class="list-card">
+                   <img src="/" alt="">
+                  <h class="name">section 01</h>
+                </li>
+                
+
+                <li class="list-card">
+                    <h class="name">section 02</h>
+                </li>
+
+                  <li class="list-card">
+                    <h class="name">section 03</h>
+                </li>
+            </ul>
+           </div>
+                
+
+            
+            
+        </div>
+  
+      
+
+        <script>
+        //0.1 동작
+       
+        //02. 목적(조건)
+        //-스크롤 위치
+        //-.animation 위치    
+        //03. 결과
+        //-----------
+        let changeStatus = false;
+
+        function handleWindowScroll(e){
+            console.dir(document.scrollingElement.scrollTop);
+
+            const targetEle = document.querySelector('.animation');
+            const scrollY = document.scrollingElement.scrollTop;
+            const targetY = targetEle.offsetTop;
+            if (targetY - window.innerHeight < scrollY) {
+				const animationTarget = targetEle.querySelectorAll('.list-bank');
+
+				animationTarget.forEach((el, index) => {
+					el.style.transitionDelay = `${.5 * index}s`;
+					el.classList.add('active');
+                    if( changeStatus === false){
+                        numberChange(el);
+                    }
+				})
+
+                changeStatus = true;
+			} else {
+				const animationTarget = targetEle.querySelectorAll('.list-bank');
+				animationTarget.forEach((el, index) => {
+					el.classList.remove('active');
+        
+				})
+
+			}
+        }
+
+        const numberChange = (dom) => {
+           
+            const won_el = dom.querySelector('.won');
+            const target = +won_el.dataset.won;
+            let nowWon = target - 670000;
+            const numberInterval =setInterval(function(){
+                nowWon = nowWon+1000;
+                const result = ``;
+                won_el.innerHTML = numberWithCommas(nowWon);
+                
+                if(nowWon === target){
+                   clearInterval(numberInterval);
+                }
+            },1)
+        }
+      
+        
+        
+       function numberWithCommas(x){
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+       }
+        const init = () => {
+            window.addEventListener('scroll', handleWindowScroll);
+
+        }
+        init();
+        </script>
+</body>
+
+</html>
