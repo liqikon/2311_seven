@@ -1,116 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Ditto-card</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
     <header>
-    <div class="con">
-        <h1>title</h1>
-        <p>subtitle</p>
-        
-    </div>
-    </header>   
-   
-       
-       
         <div class="con">
-           <ul class="card">
-
-                <li class="list-card">
-                   <img src="/" alt="">
-                  <h class="name">section 01</h>
-                </li>
-                
-
-                <li class="list-card">
-                    <h class="name">section 02</h>
-                </li>
-
-                  <li class="list-card">
-                    <h class="name">section 03</h>
-                </li>
-            </ul>
-           </div>
-                
-
-            
-            
+            <img src = "./source/title.png" alt = "ditto">
         </div>
-  
-      
+    </header>
 
-        <script>
-        //0.1 동작
-       
-        //02. 목적(조건)
-        //-스크롤 위치
-        //-.animation 위치    
-        //03. 결과
-        //-----------
-        let changeStatus = false;
 
-        function handleWindowScroll(e){
-            console.dir(document.scrollingElement.scrollTop);
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Flip Card CSS</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="main.css">
+        </head>
+        <body>
+            
+            <div class = "wrapper">
+                <div class = "cards-container">
+                    <!-- single card -->
+                    <div class = "card">
+                        <div class = "card-wrapper">
+                            <div class = "front-card">
+                            </div>
+                            <div class = "rear-card">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of singe card -->
+                    <!-- single card -->
+                    <div class = "card">
+                        <div class = "card-wrapper">
+                            <div class = "front-card">
+                               
+                            </div>
+                            <div class = "rear-card">
+            
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of singe card -->
+                    <!-- single card -->
+                    <div class = "card">
+                        <div class = "card-wrapper">
+                            <div class = "front-card">
+                            </div>
+                            <div class = "rear-card">
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of singe card -->
+                     <!-- single card -->
+                     <div class = "card">
+                        <div class = "card-wrapper">
+                            <div class = "front-card">
+                            </div>
+                            <div class = "rear-card">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of singe card -->
+                     <!-- single card -->
+                     <div class = "card">
+                        <div class = "card-wrapper">
+                            <div class = "front-card">
+                            </div>
+                            <div class = "rear-card">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of singe card -->
+                </div>
+            </div>
+            
+        </body>
+    </html>
 
-            const targetEle = document.querySelector('.animation');
-            const scrollY = document.scrollingElement.scrollTop;
-            const targetY = targetEle.offsetTop;
-            if (targetY - window.innerHeight < scrollY) {
-				const animationTarget = targetEle.querySelectorAll('.list-bank');
 
-				animationTarget.forEach((el, index) => {
-					el.style.transitionDelay = `${.5 * index}s`;
-					el.classList.add('active');
-                    if( changeStatus === false){
-                        numberChange(el);
-                    }
-				})
+    
+    <!-- <div class="card">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="/source/test.png" alt="Avatar" >
+                </div>
+                <div class="flip-card-back">
+                    <img src="/source/test_back.png" alt="Avatar" >
 
-                changeStatus = true;
-			} else {
-				const animationTarget = targetEle.querySelectorAll('.list-bank');
-				animationTarget.forEach((el, index) => {
-					el.classList.remove('active');
-        
-				})
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="/source/test.png" alt="Avatar">
+                </div>
+                <div class="flip-card-back">
+                    <img src="/source/test_back.png" alt="Avatar">
 
-			}
-        }
+                </div>
+            </div>
+        </div>
+        <div calss="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="/source/test.png" alt="Avatar" >
+                </div>
+                <div class="flip-card-back">
+                    <img src="/source/test_back.png" alt="Avatar">
 
-        const numberChange = (dom) => {
-           
-            const won_el = dom.querySelector('.won');
-            const target = +won_el.dataset.won;
-            let nowWon = target - 670000;
-            const numberInterval =setInterval(function(){
-                nowWon = nowWon+1000;
-                const result = ``;
-                won_el.innerHTML = numberWithCommas(nowWon);
-                
-                if(nowWon === target){
-                   clearInterval(numberInterval);
-                }
-            },1)
-        }
-      
-        
-        
-       function numberWithCommas(x){
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                </div>
+            </div>
+        </div>
+        <div calss="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="/source/test.png" alt="Avatar">
+                </div>
+                <div class="flip-card-back">
+                    <img src="/source/test_back.png" alt="Avatar">
 
-       }
-        const init = () => {
-            window.addEventListener('scroll', handleWindowScroll);
+                </div>
+            </div>
+        </div>
+        <div calss="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="/source/test.png" alt="Avatar">
+                </div>
+                <div class="flip-card-back">
+                    <img src="/source/test_back.png" alt="Avatar">
 
-        }
-        init();
-        </script>
-</body>
-
-</html>
+                </div>
+            </div>
+        </div>
+    </div> -->

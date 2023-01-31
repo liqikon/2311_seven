@@ -1,0 +1,108 @@
+*{
+	margin: 0; 
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+h1{
+	margin-top: 30px;
+}
+
+.title{
+	font-size: 30px;
+	text-decoration: underline;
+	margin: 30px 0;
+		color: darkslateblue;
+}
+
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/*-------------01. 가상클래스-----------*/
+ul{
+	background-color: bisque;
+	color: cadetblue;
+	line-height: 1.5;
+	text-align: center;
+	font-weight: 700;
+}
+/*첫번째 자식*/
+li:first-child{
+	color: aliceblue;
+}
+/*마지막 자식*/
+li:last-child{
+	color: dimgrey;
+}
+/*두번째 자식 - 선택*/
+li:nth-child(2){
+	color: darkslategray;
+}
+/*홀수번째 자식*/
+li:nth-child(odd){
+	background-color: darksalmon;
+}
+li:nth-child(even){
+	background-color: blue;
+}
+li:nth-child(3n){
+	background-color: firebrick;
+}
+li:hover{
+	color: white;
+}
+
+
+/*-------------02. 가상 태그-----------*/
+.num02{
+	font-size: 40px;
+	text-align: center;
+}
+.num02:before{
+	content: "1";
+}
+.num02:after{
+	content: "3";
+}
+
+/*-------------03. display-----------*/
+
+.sample{
+	padding: 10px;
+	border: 5px solid red;
+	background-color: dimgrey;
+	color: white;
+
+/*	display: inline;*/
+/*	display: inline-block;*/
+/*	display: block;*/
+/*	display: none;*/
+}
+
+/*img tag*/
+/*이미지 태그는 width를 수정가능하게 하기 위해 inline-block태그 입니다.*/
+.dis03{
+	display: inline-block;
+	width: 400px;
+}
+
+.btn{
+	background-color: black;
+	color: white;
+	display: inline-block;
+	padding: 20px 40px;
+	
+/*	블록으로 변경할 시 width 값을 일일이 맞추어 주어야 된다.*/
+/*	display: block;*/
+/*	width: 60px;*/
+}
+
+
+
+
+
+
+
