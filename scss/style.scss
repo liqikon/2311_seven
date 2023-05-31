@@ -83,16 +83,16 @@ h1 {
     text-align: center;
   }
   .enter{
-    margin:0;
+    margin:-2rem;
    
   }
   input{
-    font-size: 2rem;
-   
+    font-size: 0.3rem;
+    border-radius: 0px;
     padding: 1rem 0rem;
   }
   button{
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .sentence {
     padding:0;
@@ -103,7 +103,7 @@ h1 {
   }
 
   h1{
-    font-size: 8rem;
+    font-size: 5rem;
     margin:0;
     padding:0;
   }
