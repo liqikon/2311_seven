@@ -1,199 +1,70 @@
-/* default */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
-  font-family: 'Raleway', sans-serif;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
+  overflow: hidden;
 }
 
+html,
 body {
-  background: #FFA3F6 url("../source/bg.png") repeat top;
-}
-
-.con {
-  width: 70%;
-  margin: auto;
-  position: relative;
-  text-align: center;
-}
-
-header {
-  padding: 15px 0 0 0;
-}
-
-.wrapper {
-  position: relative;
-  bottom: 60px;
-  z-index: 10;
-  width: 60vw;
-  text-align: center;
-  margin: auto;
-}
-
-.about-info img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.cards-container {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 10px;
-}
-
-.card:nth-child(1) .front-card {
-  background: url("../source/front_01.png") center/cover no-repeat;
-  width: 262px;
-  height: 754px;
-}
-
-.card:nth-child(2) .front-card {
-  background: url("../source/front_02.png") no-repeat;
-  background-position: center bottom;
-  padding-top: 11rem;
-  width: 459px;
-  height: 565px;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-}
-
-.card:nth-child(3) .front-card {
-  background: url("../source/front_03.png") center/cover no-repeat;
-  width: 225px;
-  height: 737px;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-.card:nth-child(4) .front-card {
-  background: url("../source/front_04.png") center/cover no-repeat;
-  width: 238px;
-  height: 771px;
-}
-
-.card:nth-child(5) .front-card {
-  background: url("../source/front_05.png") center/cover no-repeat;
-  width: 227px;
-  height: 790px;
-}
-
-.card {
-  height: 818px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
-.card-wrapper {
-  position: relative;
-  width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  background: black;
 }
 
-.card:hover .card-wrapper {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.front-card, .rear-card {
-  border-radius: 4px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-
-.card:nth-child(1) .rear-card {
-  background: url("../source/back_01.png") center/cover no-repeat;
-  width: 262px;
-  height: 754px;
-}
-
-.card:nth-child(2) .rear-card {
-  background: url("../source/back_02.png") no-repeat;
-  background-position: center bottom;
-  padding-top: 11rem;
-  width: 459px;
-  height: 565px;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-}
-
-.card:nth-child(3) .rear-card {
-  background: url("../source/back_03.png") center/cover no-repeat;
-  width: 225px;
-  height: 737px;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-.card:nth-child(4) .rear-card {
-  background: url("../source/back_04.png") center/cover no-repeat;
-  width: 238px;
-  height: 771px;
-}
-
-.card:nth-child(5) .rear-card {
-  background: url("../source/back_05.png") center/cover no-repeat;
-  width: 227px;
-  height: 790px;
-}
-
-.rear-card {
+.container {
+  display: block;
   text-align: center;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  background: #00cec1;
-  color: #fff;
 }
 
-.front-card div {
-  position: absolute;
+.enter {
+  padding-top: 13rem;
 }
 
-@media (max-width: 1170px) {
-  .wrapper {
-    padding: 30px 0;
-  }
-  .cards-container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
+input {
+  background-color: black;
+  color: white;
+  border: 0px;
+  border-bottom: 0.1rem solid white;
+  font-size: 4rem;
+  font-family: 'Bebas Neue', sans-serif;
+  outline: none;
+  text-align: center;
+}
+
+button {
+  background-color: white;
+  font-size: 3rem;
+  padding: 0.5rem 1.3rem;
+  height: 100%;
+  font-family: 'Bebas Neue', sans-serif;
+  color: black;
+  margin-left: 2rem;
+}
+
+.sentence {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  padding-left: 10rem;
+}
+
+h1 {
+  font-size: 18rem;
+  margin: 13rem 0rem;
+  color: white;
+}
+
+.text {
+  position: relative;
+  margin-left: 3rem;
+  color: black;
+  background: white;
 }
 
 @media (max-width: 800px) {
-  .cards-container {
+  .container {
     width: 90vw;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */
