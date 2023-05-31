@@ -16,20 +16,23 @@ body {
   font-family: 'Bebas Neue', sans-serif;
   background: black;
 }
-.container{
+
+.container {
   display: block;
- text-align: center;
-  
-
-}
-.enter{
-padding-top: 13rem;
+  text-align: center;
 
 
 }
-input { 
+
+.enter {
+  padding-top: 13rem;
+
+
+}
+
+input {
   background-color: black;
-  color:white;
+  color: white;
   border: 0px;
   border-bottom: 0.1rem solid white;
   font-size: 4rem;
@@ -37,12 +40,13 @@ input {
   outline: none;
   text-align: center;
 }
+
 button {
   // position: relative;
   background-color: white;
   font-size: 3rem;
-  padding: 0.5rem 1.3rem ;
-  height:100%;
+  padding: 0.5rem 1.3rem;
+  height: 100%;
   font-family: 'Bebas Neue', sans-serif;
   color: black;
   margin: 2rem;
@@ -50,15 +54,16 @@ button {
 }
 
 .sentence {
- 
+
   display: flex;
- 
-  white-space:nowrap;
+
+  white-space: nowrap;
   padding-left: 10rem;
 
 }
+
 h1 {
- 
+
   font-size: 18rem;
   margin: 13rem 0rem;
   color: white;
@@ -72,47 +77,57 @@ h1 {
   margin-left: 3rem;
   color: black;
   background: white;
+
 }
 
 
 
 
 @media(max-width: 800px) {
-  .container{
- 
+  .container {
+
     text-align: center;
   }
-  .enter{
-    margin-top:-5rem;
-   
+
+  .enter {
+    margin-top: -5rem;
+
   }
-  input{
+
+  input {
     font-size: 2rem;
     border-radius: 0px;
     padding: 0.3rem 0rem;
   }
-  button{
+
+  button {
     font-size: 1rem;
-    margin:0.5rem;
+    margin: 0.5rem;
   }
+
   .sentence {
-    padding:0;
-    margin-top:5rem;
+    padding: 0;
+    margin-top: 5rem;
     justify-content: center;
     flex-direction: column;
-    letter-spacing : -0.5em 
+    letter-spacing: -0.5em;
+   
+
     // display: block;
   }
 
-  h1{
+  h1 {
     font-size: 8rem;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
   }
-  .text{
-    padding:0;
-    margin-left:0;
+
+  .text {
+    padding: 0;
+    margin-left: 0;
     position: relative;
     align-self: center;
+    // white-space: pre-line;
+    
   }
 }
