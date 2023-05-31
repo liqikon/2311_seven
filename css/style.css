@@ -70,7 +70,7 @@ h1 {
     margin: -2rem;
   }
   input {
-    font-size: 0.3rem;
+    font-size: 2rem;
     border-radius: 0px;
     padding: 1rem 0rem;
   }
@@ -87,6 +87,7 @@ h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    letter-spacing: -0.05em;
   }
   h1 {
     font-size: 5rem;
