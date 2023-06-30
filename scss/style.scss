@@ -1,133 +1,159 @@
-// /* default */
+/* default */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 * {
   overflow: hidden;
 }
 
-
 html,
 body {
   height: 100%;
   margin: 0;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   background: black;
 }
 
-.container {
-  display: block;
+.title {
   text-align: center;
-
-
+  margin-top: 80px;
 }
 
-.enter {
-  padding-top: 13rem;
-
-
+.player-container {
+  text-align: center;
+  margin: 50px auto;
+  background: linear-gradient(to bottom right, #272727, #121212);
+  border: 2px solid;
+  border-image: linear-gradient(to bottom right, #ffffff, #000000) 1;
+  width: 600px;
+  // height:800px;
+  border-image-slice: 1;
+  border-radius: 20px;
+  padding:30px;
+}
+.disk{
+  transition: transform 0.3s ease-in-out;
+}
+.rotate {
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#playButton {
+  background-image: url('../src/paly_off.png');
+  margin-bottom: 10px;
 }
 
-input {
-  background-color: black;
-  color: white;
-  border: 0px;
-  border-bottom: 0.1rem solid white;
-  font-size: 4rem;
-  font-family: 'Bebas Neue', sans-serif;
-  outline: none;
-  text-align: center;
+#playButton.on {
+  background-image: url('../src/paly_on.png');
+  background-color: transparent;
+  /* 다른 스타일 속성들 */
+}
+
+#pauseButton {
+  background-image: url('../src/pause_off.png');
+}
+
+#pauseButton.on {
+  background-image: url('../src/pause_on.png');
 }
 
 button {
-  // position: relative;
-  background-color: white;
-  font-size: 3rem;
-  padding: 0.5rem 1.3rem;
-  height: 100%;
-  font-family: 'Bebas Neue', sans-serif;
-  color: black;
-  margin: 2rem;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0px;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
 
 }
 
-.sentence {
+button:focus,
+button:active {
+  outline: none !important;
+}
 
+.btn-container {
   display: flex;
-
-  white-space: nowrap;
-  padding-left: 10rem;
-
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-h1 {
-
-  font-size: 18rem;
-  margin: 13rem 0rem;
-  color: white;
-  // top: 30%;
-
+.timeline-container {
+  width: 320px;
+  height: 120px;
+  background-color: #0f0f0f;
+  border: 1px solid #313131;
+  margin-left: 20px;
+  padding: 20px ;
+  padding-top: 40px;
+  color:#ffffff
 }
 
-.text {
+.timeline {
+  /* 타임라인 바의 스타일을 지정하세요 */
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+ 
+}
+
+.timeline-progress {
+  /* 타임라인 진행 상태를 나타내는 스타일을 지정하세요 */
+  height: 100%;
+  background-color: #F9A6C4;
+}
+
+.time {
+  /* 시간 표시 영역의 스타일을 지정하세요 */
+  margin-top: 5px;
+  padding-top: 20px;
+}
+.btn-timeline-container{
+  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  // justify-content: flex-end;
+}
+.song{
+  color:#F9A6C4;
+  font-size: 13px;
+  
+}
+.volume-container {
+  width: 80px;
+  height: 230px;
+  margin-left: 20px;
+  background-image: url('../src/volume.png');
   position: relative;
-
-  margin-left: 3rem;
-  color: black;
-  background: white;
-
 }
 
+.volume-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 200px;
+  background-color: #000;
+  cursor: pointer;
+}
 
-
-
-@media(max-width: 800px) {
-  .container {
-
-    text-align: center;
-  }
-
-  .enter {
-    margin-top: -5rem;
-
-  }
-
-  input {
-    font-size: 2rem;
-    border-radius: 0px;
-    padding: 0.3rem 0rem;
-  }
-
-  button {
-    font-size: 1rem;
-    margin: 0.5rem;
-  }
-
-  .sentence {
-    padding: 0;
-    margin-top: 5rem;
-    justify-content: center;
-    flex-direction: column;
-    letter-spacing: -0.5em;
-   
-
-    // display: block;
-  }
-
-  h1 {
-    font-size: 8rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  .text {
-    padding: 0;
-    margin-left: 0;
-    position: relative;
-    align-self: center;
-    // white-space: pre-line;
-    
-  }
+.volume-progress {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px; /* Adjust the width as desired */
+  height: 10px;
+  background-color: #F9A6C4;
 }
