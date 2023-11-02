@@ -1,15 +1,23 @@
-const lyrics = "I'm super sy, super shy But wait a minute while I make you mine make you mine you're on my mind all the time I wanna tell you but I'm super shy, super shy I'm super shy, super shy But wait a minute while I make you mine make you mine you're on my mind all the time I wanna tell you but I'm super shy, super shy And I wanna go out with you, where you wanna go? Find a lil' spot, just sit and talk";
-const lyricsContainer = document.getElementById("lyrics");
 
-let index = 0;
-let timer;
-
-function addLetter() {
-  if (index < lyrics.length) {
-    lyricsContainer.innerHTML += lyrics[index];
-    index++;
-    timer = setTimeout(addLetter, 100);
+gsap.set(".seven", { yPercent: -5});
+gsap.to(".seven", {
+  yPercent: 0,
+  ease: "none",
+  scrollTrigger: {
+    scrub: 0
+  },
+});
+gsap.set(".bottom", { yPercent: 0});
+gsap.to(".bottom", {
+  yPercent: -5,
+  ease: "none",
+  scrollTrigger: {
+    scrub: 5
   }
-}
+});
 
-addLetter();
+// function changeText(element) {
+//     if (element.innerHTML === '7') element.innerHTML = 'D';
+//    else if (element.innerHTML === 'D') element.innerHTML = 'F';
+//     else element.innerHTML = '7';
+// }

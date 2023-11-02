@@ -1,9 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+
+
 body {
   background-color: #FFFFFF;
   margin: 0px;
   padding: 0px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #000000;
   overflow: hidden;
   height: 100vh;
@@ -12,6 +16,11 @@ body {
 .container {
   display: block;
   text-align: center;
+  // flex-wrap: wrap;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+
   height: 100vh;
   width: 100vw;
 }
@@ -28,39 +37,51 @@ body {
   margin-top: 5rem;
   font-size: 12rem;
   white-space: nowrap;
+
 }
 
 .text-blur {
   margin: 0px;
   color: transparent;
-  text-shadow: 0 0 0.6666666667rem #000000;
+  text-shadow: 0 0 (10rem / 15) #000000;
   transition: all 0.35s ease;
+
+  &:hover {
+    color: #000000;
+    text-shadow: none;
+  }
 }
-.text-blur:hover {
-  color: #000000;
-  text-shadow: none;
-}
+
 
 .text-blur-bottom {
   color: #000000;
+
   text-shadow: none;
   transition: all 0.35s ease;
+
+  &:hover {
+
+    color: transparent;
+    text-shadow: 0 0 (10rem / 5) #000000;
+  }
 }
-.text-blur-bottom:hover {
-  color: transparent;
-  text-shadow: 0 0 2rem #000000;
-}
+
 
 .number {
   display: block;
+
   padding-right: 40rem;
   padding-bottom: 18rem;
   margin-top: -7rem;
   height: 200px;
+
+
   font: normal 140px/150px Montserrat, sans-serif;
+
 }
 
 .number b {
+
   float: right;
   overflow: hidden;
   position: relative;
@@ -69,41 +90,54 @@ body {
 }
 
 .number .innerNumber {
+  // display: inline-block;
+
   position: relative;
   white-space: nowrap;
   top: 0;
   left: 0;
+
+
   animation: move 5s;
   animation-iteration-count: infinite;
   animation-delay: 2s;
+
 }
 
 @keyframes move {
   0% {
     top: 0px;
   }
+
   14% {
     top: -150px;
   }
+
   28% {
     top: -300px;
   }
+
   42% {
     top: -450px;
   }
+
   56% {
     top: -600px;
   }
+
   70% {
     top: -750px;
   }
+
   84% {
     top: -900px;
   }
 }
+
 .bottom p {
+
   font-size: 5rem;
   line-height: 3rem;
   margin: 0px;
   letter-spacing: -2px;
-}/*# sourceMappingURL=style.css.map */
+}
